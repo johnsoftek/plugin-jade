@@ -1,0 +1,31 @@
+{
+  "name": "plugin-jade",
+  "version": "0.1.1",
+  "description": "Jade loader plugin",
+  "main": "jade.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnsoftek/plugin-jade.git"
+  },
+  "keywords": [
+    "jspm",
+    "jade",
+    "loader",
+    "plugin"
+  ],
+  "author": "John Murphy <john.softek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnsoftek/plugin-jade/issues"
+  },
+  "homepage": "https://github.com/johnsoftek/plugin-jade",
+  "devDependencies": {
+    "connect": "^3.3.3",
+    "open": "0.0.5",
+    "serve-static": "^1.7.1"
+  },
+  "jspm": {}
+}
