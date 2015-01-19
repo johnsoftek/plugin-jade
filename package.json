@@ -27,5 +27,10 @@
     "open": "0.0.5",
     "serve-static": "^1.7.1"
   },
-  "jspm": {}
+  "jspm": {
+    "dependencies": {
+      "jade": "npm:jade@1.9.1/jade",
+      "runtime": "npm:jade@1.9.1/runtime"
+    }
+  }
 }
