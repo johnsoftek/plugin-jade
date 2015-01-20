@@ -29,8 +29,7 @@
   },
   "jspm": {
     "dependencies": {
-      "jade": "npm:jade@1.9.1/jade",
-      "runtime": "npm:jade@1.9.1/runtime"
+      "jade": "github:jadejs/jade@^1.9.1"
     }
   }
 }
