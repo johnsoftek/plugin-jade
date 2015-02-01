@@ -1,6 +1,6 @@
-var Jade = require('jade');
+var Jade = require('jade-compiler');
 
-exports.runtime = require('runtime');
+exports.runtime = require('jade-runtime');
 
 exports.translate = function(load) {
 	var fn = Jade.compileClient(load.source);

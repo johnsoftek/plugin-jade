@@ -5,17 +5,9 @@
   <title>SystemJs-Jade plugin test</title>
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
-  <script>
-    System.import('./test.jade!')
-    .then(function(fn) {
-      document.body.innerHTML = fn();
-    })
-    .catch(function(err) {
-      console.log('ERROR: ', err);
-    });
-  </script>
+  <script src="app.js"></script>
 </head>
 <body>
-    Wait for 10 seconds...
+    Wait a few seconds...
 </body>
 </html>
