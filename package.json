@@ -29,8 +29,7 @@
   },
   "jspm": {
     "dependencies": {
-      "jade-compiler": "npm:jade@1.9.0",
-      "jade-runtime": "npm:jade-runtime@1.0.0"
+      "jade-compiler": "npm:jade@1.9.1"
     }
   }
 }
