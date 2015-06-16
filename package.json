@@ -1,6 +1,6 @@
 {
   "name": "plugin-jade",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Jade loader plugin",
   "main": "jade.js",
   "scripts": {
@@ -29,10 +29,15 @@
   },
   "jspm": {
     "map": {
-      "jade-runtime": "npm:jade@1.9.1/lib/runtime"
+      "jade-runtime": "npm:jade@1.11.0/lib/runtime"
     },
     "dependencies": {
-      "jade-compiler": "npm:jade@1.9.1"
+      "jade-compiler": "npm:jade@1.11.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.4.3",
+      "babel-runtime": "npm:babel-runtime@^5.4.3",
+      "core-js": "npm:core-js@^0.9.10"
     }
   }
 }
