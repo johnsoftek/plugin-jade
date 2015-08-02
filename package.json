@@ -24,13 +24,11 @@
   "homepage": "https://github.com/johnsoftek/plugin-jade",
   "devDependencies": {
     "connect": "^3.3.3",
+    "jspm": "^0.16.0-beta.3",
     "open": "0.0.5",
     "serve-static": "^1.7.1"
   },
   "jspm": {
-    "map": {
-      "jade-runtime": "npm:jade@1.11.0/lib/runtime"
-    },
     "dependencies": {
       "jade-compiler": "npm:jade@1.11.0"
     },
@@ -39,8 +37,5 @@
       "babel-runtime": "npm:babel-runtime@^5.1.13",
       "core-js": "npm:core-js@^0.9.4"
     }
-  },
-  "map": {
-    "jade-runtime": "npm:jade@1.11.0/lib/runtime"
   }
 }
