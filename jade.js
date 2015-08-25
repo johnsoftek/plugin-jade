@@ -2,7 +2,8 @@ var Jade = require('jade-compiler');
 var P_runtime_loc = System.normalize('jade-compiler/lib/runtime', module.id );
 
 exports.translate = function(load) {
-  var template_fn = Jade.compileClient(load.source);
+console.log('load', load)
+  var template_fn = Jade.compileClient(load.source, {filename: load.address});
   return Promise.resolve(
 		P_runtime_loc.then(function(runtime_loc) {
 			// Note: mask "require" by separating from  left parenthesis to prevent
