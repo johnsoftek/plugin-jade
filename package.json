@@ -24,18 +24,19 @@
   "homepage": "https://github.com/johnsoftek/plugin-jade",
   "devDependencies": {
     "connect": "^3.3.3",
-    "jspm": "^0.16.0-beta.3",
+    "jspm": "^0.16.9",
     "open": "0.0.5",
     "serve-static": "^1.7.1"
   },
   "jspm": {
     "dependencies": {
-      "jade-compiler": "npm:jade@1.11.0"
+      "jade-compiler": "npm:jade@1.11.0",
+      "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^0.9.4",
+      "babel": "npm:babel-core@^5.6.4",
+      "babel-runtime": "npm:babel-runtime@^5.6.4",
+      "core-js": "npm:core-js@^2.0.0",
       "traceur": "github:jmcriffey/bower-traceur@0.0.90",
       "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90"
     }
