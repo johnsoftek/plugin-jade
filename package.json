@@ -30,8 +30,7 @@
   },
   "jspm": {
     "dependencies": {
-      "jade-compiler": "npm:jade@1.11.0",
-      "text": "github:systemjs/plugin-text@^0.0.4"
+      "jade-compiler": "npm:jade@1.11.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.6.4",

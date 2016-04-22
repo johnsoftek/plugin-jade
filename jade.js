@@ -55,7 +55,7 @@ function fetch_includes ({includes, parent_address}) {
   let parent_dir = parent_address.replace(/^(.+\/)*(.+)$/, '$1')
   return Promise.all(
     includes.map(include =>
-      System.import(parent_dir + include.file_path + '!text')
+        System.fetch({ name: include.file_path, address: parent_dir + include.file_path, metadata: {} })
         .then(text => text.charAt(text.length - 1) === '\n' ? text : text + '\n')
       )
     )
