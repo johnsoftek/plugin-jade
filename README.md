@@ -1,22 +1,47 @@
-plugin-jade
-===========
+jade
+====
 
-JADE loader plugin
+Systemjs Jade loader plugin. Jade source code is processed by the Jade compiler and returned as a Javascript function. Includes are handled (first level only).
 
-This plugin will translate Jade templates to Javascript for loading by jspm
+Installing
+---
+For SystemJS use, locate `jade.js` in the application, and then locate it with map configuration:
 
-To use it, install it with jspm:
-```bash
-jspm install jade
+```javascript
+System.config({
+  map: {
+    jade: 'path/to/jade.js'
+  }
+});
 ```
-After that you can include Jade templates in your modules:
-```bash
+For installing with jspm, run `jspm install jade`.
+
+Basic Use
+---
+```javascript
 var fn = require('template.jade!');
 var html = fn(data);
 ```
-# Tests
 
-```bash
+If you add a loader definition, you can dispense with the ! e.g. `var fn = require('template.jade');`
+```
+SystemJS.config({
+  transpiler: "plugin-babel",
+  packages: {
+...
+  },
+  meta: {
+    "*.jade": {
+      "loader": "jade"
+    }
+  }
+});
+```
+
+Tests
+---
+
+```
 jspm install
 npm install
 npm test
@@ -28,5 +53,6 @@ jspm bundle app
 npm test bundle
 ```
 
-#
-Thanks to Vsevolod Strukchinsky. plugin-jade was based on his jsx plugin https://github.com/floatdrop/plugin-jsx. 
+<sub>
+* Thanks to Vsevolod Strukchinsky. plugin-jade was based on his jsx plugin https://github.com/floatdrop/plugin-jsx.
+ </sub>
