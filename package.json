@@ -1,6 +1,6 @@
 {
   "name": "plugin-jade",
-  "version": "0.4.0",
+  "version": "0.6.3",
   "description": "Jade loader plugin",
   "main": "jade.js",
   "scripts": {
@@ -23,19 +23,19 @@
   },
   "homepage": "https://github.com/johnsoftek/plugin-jade",
   "devDependencies": {
-    "connect": "^3.3.3",
-    "jspm": "^0.16.9",
+    "connect": "^3.4.1",
+    "jspm": "^0.16.33",
     "open": "0.0.5",
-    "serve-static": "^1.7.1"
+    "serve-static": "^1.10.2"
   },
   "jspm": {
     "dependencies": {
       "jade-compiler": "npm:jade@1.11.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.6.4",
-      "babel-runtime": "npm:babel-runtime@^5.6.4",
-      "core-js": "npm:core-js@^2.0.0",
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
       "traceur": "github:jmcriffey/bower-traceur@0.0.90",
       "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90"
     }
