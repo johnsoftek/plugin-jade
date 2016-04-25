@@ -38,6 +38,10 @@ SystemJS.config({
 });
 ```
 
+jspm versions
+-------------
+This version is compatible with jspm version 0.16.x. When version 0.17.x is released, Jade plugin will be tested to determine whether there is any breaking change.
+
 Tests
 ---
 

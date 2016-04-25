@@ -1,6 +1,6 @@
 {
   "name": "plugin-jade",
-  "version": "0.6.3",
+  "version": "1.0.0",
   "description": "Jade loader plugin",
   "main": "jade.js",
   "scripts": {
