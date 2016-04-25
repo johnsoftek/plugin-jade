@@ -18,6 +18,12 @@ export function translate (load) {
 
 function get_runtime_loc (module_name) {
   return System.normalize('jade-compiler/lib/runtime', module_name)
+    .then((loc) => {
+      if (this.builder) {
+        loc = this.getCanonicalName(loc)
+      }
+      return loc
+    })
 }
 
 function expand_text ({source, address}) {
