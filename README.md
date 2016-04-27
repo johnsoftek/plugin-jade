@@ -16,8 +16,8 @@ System.config({
 ```
 For installing with jspm, run `jspm install jade`.
 
-Basic Use
----
+Basic use
+---------
 ```javascript
 var fn = require('template.jade!');
 var html = fn(data);
@@ -38,9 +38,27 @@ SystemJS.config({
 });
 ```
 
+Module use
+----------
+For esm usage, the plugin exports two named exports: fn and html. Usage:
+```javascript
+import { html } from 'template.jade'
+```
+or:
+```javascript
+import { fn } from 'template.jade'
+let html = fn(locals)
+```
+The default export is the template function:
+```javascript
+import fn from 'template.jade'
+let html = fn(locals)
+```
+
+
 jspm versions
 -------------
-This version is compatible with jspm version 0.16.x. When version 0.17.x is released, Jade plugin will be tested to determine whether there is any breaking change.
+This version is compatible with jspm version 0.17
 
 Tests
 ---

@@ -11,8 +11,15 @@ export function translate (load) {
       // Note: mask "require" by separating from  left parenthesis to prevent
       // dependency processing on module load.
       //
-      return 'var jade = require' + '("' + runtime_loc + '");\n\n' +
-        'module.exports = ' + Jade.compileClient(text)
+      let jade_fn = Jade.compileClient(text)
+      let REQ = 'require'
+      let fn =
+        `var jade = ${REQ}("${runtime_loc}")
+        var jade_fn = ${jade_fn}
+        jade_fn.fn = jade_fn
+        jade_fn.html = jade_fn()
+        module.exports = jade_fn`
+      return fn
     })
 }
 
