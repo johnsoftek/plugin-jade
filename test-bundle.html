@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>SystemJs-Jade plugin test</title>
   <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
+    <script src="jspm.browser.js"></script>
+    <script src="jspm.config.js"></script>
   <script src="build.js"></script>
 </head>
 <body>
     Wait a few seconds...
   <script>
-     System.import('app')
+     System.import('app.js')
     .then(function(fn) {
       document.body.innerHTML = fn({local1: 'no'});
     })

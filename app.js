@@ -1,1 +1,1 @@
-module.exports = require('d1/test.jade!')
+module.exports = require('d1/test.jade')

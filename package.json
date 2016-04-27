@@ -2,7 +2,7 @@
   "name": "plugin-jade",
   "version": "1.1.0",
   "description": "Jade loader plugin",
-  "main": "jade.js",
+  "main": "plugin-jade.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/johnsoftek/plugin-jade",
   "devDependencies": {
     "connect": "^3.4.1",
-    "jspm": "^0.16.33",
+    "jspm": "^0.17.0-beta.13",
     "open": "0.0.5",
     "serve-static": "^1.10.2"
   },
@@ -33,11 +33,79 @@
       "jade-compiler": "npm:jade@1.11.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4",
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9",
       "traceur": "github:jmcriffey/bower-traceur@0.0.90",
       "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90"
+    },
+    "peerDependencies": {
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+      "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "http": "github:jspm/nodelibs-http@^0.2.0-alpha",
+      "https": "github:jspm/nodelibs-https@^0.2.0-alpha",
+      "module": "github:jspm/nodelibs-module@^0.2.0-alpha",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+      "tty": "github:jspm/nodelibs-tty@^0.2.0-alpha",
+      "url": "github:jspm/nodelibs-url@^0.2.0-alpha",
+      "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+      "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha"
+    },
+    "overrides": {
+      "github:jmcriffey/bower-traceur-runtime@0.0.90": {
+        "format": "global",
+        "meta": {
+          "traceur-runtime.js": {
+            "exports": "$traceurRuntime",
+            "format": "global"
+          }
+        }
+      },
+      "github:jmcriffey/bower-traceur@0.0.90": {
+        "format": "global",
+        "meta": {
+          "traceur.js": {
+            "exports": "traceur",
+            "format": "global"
+          }
+        }
+      },
+      "npm:babel-runtime@5.8.38": {
+        "main": false,
+        "dependencies": {},
+        "optionalDependencies": {
+          "core-js": "^1.2.0"
+        }
+      },
+      "npm:esprima@2.7.2": {
+        "jspmNodeConversion": false
+      },
+      "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:readable-stream@1.0.34": {
+        "map": {
+          "stream": "stream-browserify/index"
+        },
+        "systemjs": {
+          "main": "readable.js"
+        },
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.0",
+          "inherits": "~2.0.1",
+          "stream-browserify": "~1.0.0"
+        }
+      }
     }
   }
 }
