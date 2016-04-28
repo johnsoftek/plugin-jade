@@ -1,11 +1,17 @@
 /*global __moduleName*/
 import Jade from 'jade-compiler'
 
+let Builder
+
 export function translate (load) {
+  // capture builder object
+  if (this && this.builder) {
+    Builder = this
+  }
   return Promise.all([
-    expand_text({source: load.source, address: load.address}),
-    get_runtime_loc(__moduleName)
-  ])
+      expand_text({source: load.source, address: load.address}),
+      get_runtime_loc(__moduleName)
+    ])
     .then(function (values) {
       let [text, runtime_loc] = values
       // Note: mask "require" by separating from  left parenthesis to prevent
@@ -26,8 +32,8 @@ export function translate (load) {
 function get_runtime_loc (module_name) {
   return System.normalize('jade-compiler/lib/runtime', module_name)
     .then((loc) => {
-      if (this && this.builder) {
-        loc = this.getCanonicalName(loc)
+      if (Builder) {
+        loc = Builder.getCanonicalName(loc)
       }
       return loc
     })
@@ -68,10 +74,10 @@ function fetch_includes ({includes, parent_address}) {
   let parent_dir = parent_address.replace(/^(.+\/)*(.+)$/, '$1')
   return Promise.all(
     includes.map(include =>
-        System.fetch({ name: include.file_path, address: parent_dir + include.file_path, metadata: {} })
+      System.fetch({ name: include.file_path, address: parent_dir + include.file_path, metadata: {} })
         .then(text => text.charAt(text.length - 1) === '\n' ? text : text + '\n')
-      )
     )
+  )
 }
 
 function assemble ({ex_includes, includes, fetched_includes}) {
