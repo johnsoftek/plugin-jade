@@ -25,7 +25,7 @@
   "devDependencies": {
     "connect": "^3.4.1",
     "jspm": "^0.17.0-beta.13",
-    "open": "0.0.5",
+    "open": ">=6.0.0",
     "serve-static": "^1.10.2"
   },
   "jspm": {
